@@ -41,8 +41,9 @@ defmodule ClarxWeb do
         formats: [:html, :json],
         layouts: [html: ClarxWeb.Layouts]
 
+      use Gettext, backend: ClarxWeb.Gettext
+
       import Plug.Conn
-      import ClarxWeb.Gettext
 
       unquote(verified_routes())
     end

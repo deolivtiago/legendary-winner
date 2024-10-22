@@ -5,7 +5,7 @@ defmodule ClarxWeb.Gettext do
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import ClarxWeb.Gettext
+      use Gettext, backend: ClarxWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule ClarxWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :clarx
+  use Gettext.Backend, otp_app: :clarx
 end
