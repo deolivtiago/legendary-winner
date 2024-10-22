@@ -1,4 +1,4 @@
-defmodule ClarxCoreWeb.ErrorJSON do
+defmodule ClarxWeb.ErrorJSON do
   @moduledoc """
   This module is invoked by your endpoint in case of errors on JSON requests.
 

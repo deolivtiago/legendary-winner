@@ -1,17 +1,16 @@
-defmodule ClarxCoreWeb.Router do
-  use ClarxCoreWeb, :router
+defmodule ClarxWeb.Router do
+  use ClarxWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", ClarxCoreWeb do
+  scope "/api", ClarxWeb do
     pipe_through :api
   end
 
   # Enable Swoosh mailbox preview in development
   if Application.compile_env(:clarx, :dev_routes) do
-
     scope "/dev" do
       pipe_through [:fetch_session, :protect_from_forgery]
 

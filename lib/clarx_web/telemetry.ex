@@ -1,4 +1,4 @@
-defmodule ClarxCoreWeb.Telemetry do
+defmodule ClarxWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -86,7 +86,7 @@ defmodule ClarxCoreWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {ClarxCoreWeb, :count_users, []}
+      # {ClarxWeb, :count_users, []}
     ]
   end
 end
