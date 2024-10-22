@@ -66,10 +66,20 @@ defmodule ClarxCore.Accounts.Users do
   @doc """
   Verifies an user
   ## Examples
-      iex> verify_user(user, code)
+      iex> verify_user(user)
       {:ok, %User{}}
-      iex> verify_user(user, bad_code)
+      iex> verify_user(user)
       {:error, %Ecto.Changeset{}}
   """
-  defdelegate verify_user(user, code), to: User.Verify, as: :call
+  defdelegate verify_user(user), to: User.Verify, as: :call
+
+  @doc """
+  Confirms an user
+  ## Examples
+      iex> confirm_user(user, code)
+      {:ok, %User{}}
+      iex> confirm_user(user, bad_code)
+      {:error, %Ecto.Changeset{}}
+  """
+  defdelegate confirm_user(user, code), to: User.Confirm, as: :call
 end
